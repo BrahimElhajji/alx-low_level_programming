@@ -10,7 +10,7 @@ int main(void)
 
 	for (n = 0; n <= 99; n++)
 	{
-		for (n1 = 0; n1 <= 99; n1++)
+		for (n1 = n; n1 <= 99; n1++)
 		{
 			if (n != n1)
 			{
