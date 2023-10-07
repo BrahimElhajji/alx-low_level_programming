@@ -19,7 +19,7 @@ int main(void)
 			putchar(' ');
 			putchar((n1 / 10) + '0');
 			putchar((n1 % 10) + '0');
-			if (n != 99 || n1 != 99)
+			if (n != 98 || n1 != 99)
 			{
 				putchar(',');
 				putchar(' ');
