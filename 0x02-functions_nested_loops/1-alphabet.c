@@ -3,7 +3,7 @@
 /**
  * main - Entery point
  *
- * _putchar - is the putchar prototype
+ * print_alphabet - is for  the _putchar to print the alphabet
  *
  * Return: Always 0
  */
