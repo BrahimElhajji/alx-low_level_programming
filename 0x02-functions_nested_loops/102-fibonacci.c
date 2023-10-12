@@ -10,7 +10,7 @@ int main(void)
 	int c;
 	unsigned long fb = 0, fb1 = 1, sum;
 
-	for (c = 0; c < 50; n++)
+	for (c = 0; c < 50; c++)
 	{
 		sum = fb + fb1;
 		printf("%lu", sum);
