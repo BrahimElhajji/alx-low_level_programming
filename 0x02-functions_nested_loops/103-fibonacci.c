@@ -11,7 +11,7 @@ int main(void)
 
 		while (1)
 		{
-			s = f = f1;
+			s = f + f1;
 
 			if (s > 4000000)
 				break;
