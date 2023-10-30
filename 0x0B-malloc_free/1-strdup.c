@@ -24,9 +24,11 @@ char *_strdup(char *str)
 	{
 		return (0);
 	}
-
+	else
+	{
 	for (i = 0; i < c; i++)
 		cp[i] = str[i];
+	}
 
 	return (cp);
 }
