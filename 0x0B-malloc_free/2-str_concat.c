@@ -28,11 +28,12 @@ char *str_concat(char *s1, char *s2)
 
 	for (i = 0; i <= c + l; i++)
 	{
-		if (i < c)
+		if (i <= c)
 			constring[i] = s1[i];
 
-		else
-			constring[i] = s2[i - c];
+		if (i >= c)
+			constring[i] = s2[l];
+		l++;
 	}
 
 	constring[i] = '\0';
