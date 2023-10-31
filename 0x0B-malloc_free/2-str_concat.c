@@ -13,10 +13,10 @@ char *str_concat(char *s1, char *s2)
 	char *constring;
 
 	if (s1 == 0)
-		s1 = "";
+		s1 = "\0";
 
 	if (s2 == 0)
-		s2 = "";
+		s2 = "\0";
 
 	for (c = 0; s1[c] != '\0'; c++)
 		for (l = 0; s2[l] != '\0'; l++)
