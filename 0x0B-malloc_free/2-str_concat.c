@@ -26,15 +26,12 @@ char *str_concat(char *s1, char *s2)
 	if (constring == 0)
 		return (0);
 
-	for (i = 0; i <= c + l; i++)
-	{
+	for (i = 0; i < c + l; i++)
+		constring[i] = s1[i];
 
-		if (i <= c)
-			constring[i] = s1[i];
+	for (i = 0; i < l; i++)
+		constring[i + c] = s2[i];
 
-		if (i >= c)
-			constring[i] = s2[i - c];
-	}
 	constring[c + l] = '\0';
 	return (constring);
 }
