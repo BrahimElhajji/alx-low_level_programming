@@ -18,8 +18,13 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == 0)
 		s2 = "";
 
-	for (c = 0; s1[c] != '\0'; c++)
-	for (l = 0; s2[l] != '\0'; l++)
+	c = 0;
+	while (s1[c] != '\0')
+		c++;
+
+	l = 0;
+	while (s2[l] != '\0')
+		l++;
 
 	constring = (char *)malloc(c + l + 1);
 
