@@ -11,7 +11,7 @@
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	unsigned int i;
-	char *np;
+	void *np;
 
 	np = malloc(new_size);
 
