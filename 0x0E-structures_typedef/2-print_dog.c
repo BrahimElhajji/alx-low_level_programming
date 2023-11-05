@@ -9,8 +9,8 @@
 
 void print_dog(struct dog *d)
 {
-	char *name = (d->name != NULL) ? d->name : "(nil)";
-	char *owner = (d->owner != NULL) ? d->owner : "(nil)";
+	char *name = d->name ? d->name : "(nil)";
+	char *owner = d->owner ? d->owner : "(nil)";
 
 	if (d)
 	{
