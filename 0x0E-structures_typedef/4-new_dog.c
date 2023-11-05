@@ -14,7 +14,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	int i, lname = 0, lowner = 0;
 	dog_t *ndp;
 
-	ndp = malloc(sizeof(dog_t));
+	ndp = (dog_t *)malloc(sizeof(dog_t));
 
 	if (ndp == NULL)
 		return (NULL);
@@ -38,7 +38,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 		for (i = 0; i <= lname; i++)
 		{
 			(*ndp).name[i] = name[i];
-
 		}
 		for (i = 0; i <= lowner; i++)
 		{
