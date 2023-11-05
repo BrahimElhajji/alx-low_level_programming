@@ -8,47 +8,44 @@
  * @owner: the dog owner
  * Return: ndp
  */
-
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	int i, lname = 0, lowner = 0;
 	dog_t *ndp;
 
-	ndp = (dog_t *)malloc(sizeof(dog_t));
+	ndp = malloc(sizeof(dog_t));
 
-	while (lname != '\0')
+	if (ndp == NULL)
+		return (NULL);
+
+
+	while (lname != '\0') 
 		lname++;
 
 	while (lowner != '\0')
 		lowner++;
 
-	(*ndp).name = malloc(lname * sizeof((*ndp).name));
-	if (ndp == NULL)
-	{
-		return (NULL);
-	}
-	for (i = 0; i <= lname; i++)
-	{
-		(*ndp).name[i] = name[i];
-	}
+	(*ndp).name = malloc(lname + 1);
+	(*ndp).owner = malloc(lowner + 1);
 
-	(*ndp).owner = malloc(lowner * sizeof((*ndp).owner));
-	if (ndp == NULL)
-	{
-		return (NULL);
-	}
-	for (i = 0; i <= lowner; i++)
-	{
-		(*ndp).owner[i] = owner[i];
-	}
-
-	if ((*ndp).name == NULL || (*ndp).owner == NULL)
+	if ((*ndp).name == NULL || (*ndp).owner == NULL) 
 	{
 		free((*ndp).name);
 		free((*ndp).owner);
 		free(ndp);
-		return (NULL);
+		return NULL;
+	}
+
+	for (i = 0; i <= lname; i++) 
+	{
+		(*ndp).name[i] = name[i];
+
+	}
+	for (i = 0; i <= lowner; i++) 
+	{
+		(*ndp).owner[i] = owner[i];
 	}
 	(*ndp).age = age;
+
 	return (ndp);
 }
