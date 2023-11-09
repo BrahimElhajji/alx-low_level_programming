@@ -36,12 +36,10 @@ void print_all(const char * const format, ...)
 				if (!string)
 				{
 					printf("(nil)");
+					break;
 				}
-				else
-				{
 					printf("%s", string);
-				}
-				break;
+					break;
 		}
 		i++;
 	}
