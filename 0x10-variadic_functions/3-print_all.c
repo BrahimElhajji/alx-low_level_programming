@@ -33,17 +33,16 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				string = va_arg(args, char *);
-				if (!string)
+				if (string == 0)
 				{
 					printf("(nil)");
 					break;
 				}
-				while (string)
+				while (string != 0)
 				{
 					printf("%s", string);
 					break;
 				}
-				break;
 		}
 		i++;
 	}
