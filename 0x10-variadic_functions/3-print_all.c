@@ -38,8 +38,12 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 					break;
 				}
+				while (string)
+				{
 					printf("%s", string);
 					break;
+				}
+				break;
 		}
 		i++;
 	}
