@@ -8,18 +8,14 @@
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0;
+	unsigned int i = 0, j;
 	va_list args;
 	char *string;
 
 	va_start(args, format);
 	while (format && format[i])
 	{
-		if (i > 0 && (format[i] == 'c' || format[i] == 'i'
-					|| format[i] == 'f' || format[i] == 's'))
-		{
-			printf(", ");
-		}
+		j = 1;
 		switch (format[i])
 		{
 			case 'c':
@@ -38,12 +34,14 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 					break;
 				}
-				while (string != 0)
-				{
 					printf("%s", string);
 					break;
-				}
+			default:
+			j = 0;
+			break;
 		}
+		if (format[i + 1] && j)
+			printf(", ");
 		i++;
 	}
 	printf("\n");
