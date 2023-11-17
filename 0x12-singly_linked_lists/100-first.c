@@ -1,5 +1,6 @@
 #include "lists.h"
 
+void __attribute__((constructor)) bef_main(void);
 /**
  * main - function that prints a string before the main function is executed
  */
