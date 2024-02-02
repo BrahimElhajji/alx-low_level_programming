@@ -5,7 +5,7 @@
  * @ht: the hash table to add or update the key/value to
  * @key: is the key, can't be an empty string
  * @value: is the value associated with the key
- * Returns: 1 if it succeeded, 0 otherwise
+ * Return: 1 if it succeeded, 0 otherwise
  */
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
